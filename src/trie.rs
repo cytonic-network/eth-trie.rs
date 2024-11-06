@@ -625,7 +625,7 @@ where
             }
             Node::Hash(hash_node) => {
                 let node_hash = hash_node.hash;
-                self.passing_keys.insert(node_hash);
+                // self.passing_keys.insert(node_hash);
                 let node =
                     self.recover_from_db(node_hash)?
                         .ok_or_else(|| TrieError::MissingTrieNode {
